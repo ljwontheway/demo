@@ -5,7 +5,7 @@ import sys
 
 # 数据库连接配置
 MYSQL_CONFIG = {
-    'host': '221.228.110.148',
+    'host': '221.228.110.149',
     'user': 'root',
     'password': 'thriftdy@819',
     'database': 'test',
