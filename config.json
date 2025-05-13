@@ -1,0 +1,18 @@
+{
+  "特等奖": {
+    "count": 1,
+    "winners": []
+  },
+  "一等奖": {
+    "count": 2,
+    "winners": []
+  },
+  "二等奖": {
+    "count": 3,
+    "winners": []
+  },
+  "三等奖": {
+    "count": 5,
+    "winners": []
+  }
+}
