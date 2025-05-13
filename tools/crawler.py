@@ -46,7 +46,7 @@ class AIBotCrawler:
         soup = BeautifulSoup(html, 'html.parser')
         categories = []
 
-        # 查找主导航菜单 （在 sidebar-nav 中的 sidebar-menu）
+        # 查找主导航菜单（在 sidebar-nav 中的 sidebar-menu）
         sidebar_menu = soup.find('div', class_='sidebar-menu flex-fill')
         if sidebar_menu:
             # 查找所有主菜单项（在 sidebar-menu-inner 中）
