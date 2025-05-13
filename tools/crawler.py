@@ -30,13 +30,17 @@ class AIBotCrawler:
     def get_page(self, url):
         """获取页面内容"""
         try:
+            # 发送HTTP GET请求到指定的URL
             response = requests.get(url, headers=self.headers)
+            # 如果响应状态码不是200，抛出HTTPError异常
             response.raise_for_status()
+            # 返回页面的文本内容
             return response.text
         except Exception as e:
+            # 如果请求失败，记录错误日志
             logging.error(f"获取页面失败 {url}: {str(e)}")
+            # 返回None表示获取失败
             return None
-
     def parse_categories(self):
         """解析左侧导航栏分类"""
         html = self.get_page(self.base_url)
