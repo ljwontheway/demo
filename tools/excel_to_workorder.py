@@ -38,6 +38,21 @@ COLUMN_FIELD_MAP = {
      # '月份': 'tmonth',  # 由参数传入
 }
 
+"""
+此模块用于将Excel文件中的数据插入到MySQL数据库的workorder表中。
+
+主要功能包括：
+- 从Excel文件中读取数据，并根据预定义的列名与数据库字段名的映射关系进行转换。
+- 将转换后的数据插入到数据库中。
+- 支持批量导入指定目录下的所有Excel文件。
+- 提供自定义的月份参数以便插入到数据库中。
+
+函数：
+- insert_to_workorder(data, fields): 将数据插入到workorder表中。
+- read_excel_and_insert(file_path, tmonth=None): 从Excel文件中读取数据并插入到数据库。
+- batch_import_from_dir(dir_path, tmonth=None): 批量导入指定目录下的Excel文件。
+- get_workorder_fields(): 获取workorder表的字段信息。
+"""
 
 def insert_to_workorder(data, fields):
     if not data:
